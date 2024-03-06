@@ -46,20 +46,16 @@ public class TodoList {
      * with that urgency will be returned.
      * @return the name of the task with the current highest urgency (a String).
      */
-//    public String mostUrgent() {
-//        int index = 0;
-//        int count = 0;
-//        int urgency = 0;
-//        for (Task a : tasks) {
-//            if (a.getUrgency()>urgency) {
-//                urgency = a.getUrgency();
-//                index = count;
-//            }
-//            else if (index<tasks.size()-1){
-//                 count++;
-//            }
-//        }
-//        return tasks.get(index).getName();
+    public String mostUrgent() {
+        String name = "";
+        int urgency = 0;
+        for (Task a : tasks) {
+            if (a.getUrgency()>urgency) {
+                urgency = a.getUrgency();
+                name = a.getName();
+            }
+        }
+        return name;
 
     }
 
